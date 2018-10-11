@@ -26,6 +26,6 @@ To integrate Alamofire into your Xcode project using Carthage, specify it in you
 git "git@github.com:ampersandlabs-io/amprogresshud.git" ~> 0.0.1 
 ```
 
-Run `carthage update` to build the framework and drag the built `Alamofire.framework` into your Xcode project.
+Run `carthage update` to build the framework and drag the built `AMProgressHUD.framework` into your Xcode project.
 
 
