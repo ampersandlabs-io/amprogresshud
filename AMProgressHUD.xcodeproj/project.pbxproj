@@ -8,12 +8,22 @@
 
 /* Begin PBXBuildFile section */
 		3A079283216E05AC009D9131 /* AMProgressHUD.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A079281216E05AC009D9131 /* AMProgressHUD.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3A07928D216E083F009D9131 /* Spinner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A079289216E083F009D9131 /* Spinner.swift */; };
+		3A07928E216E083F009D9131 /* Renderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A07928A216E083F009D9131 /* Renderer.swift */; };
+		3A07928F216E083F009D9131 /* AMProgressHUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A07928B216E083F009D9131 /* AMProgressHUD.swift */; };
+		3A079290216E083F009D9131 /* Renderer.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3A07928C216E083F009D9131 /* Renderer.xib */; };
+		3A079292216E1384009D9131 /* Fonts in Resources */ = {isa = PBXBuildFile; fileRef = 3A079291216E1384009D9131 /* Fonts */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		3A07927E216E05AC009D9131 /* AMProgressHUD.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AMProgressHUD.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3A079281216E05AC009D9131 /* AMProgressHUD.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AMProgressHUD.h; sourceTree = "<group>"; };
 		3A079282216E05AC009D9131 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3A079289216E083F009D9131 /* Spinner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Spinner.swift; sourceTree = "<group>"; };
+		3A07928A216E083F009D9131 /* Renderer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Renderer.swift; sourceTree = "<group>"; };
+		3A07928B216E083F009D9131 /* AMProgressHUD.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AMProgressHUD.swift; sourceTree = "<group>"; };
+		3A07928C216E083F009D9131 /* Renderer.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Renderer.xib; sourceTree = "<group>"; };
+		3A079291216E1384009D9131 /* Fonts */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Fonts; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +57,11 @@
 			isa = PBXGroup;
 			children = (
 				3A079281216E05AC009D9131 /* AMProgressHUD.h */,
+				3A07928B216E083F009D9131 /* AMProgressHUD.swift */,
+				3A079289216E083F009D9131 /* Spinner.swift */,
+				3A07928A216E083F009D9131 /* Renderer.swift */,
+				3A07928C216E083F009D9131 /* Renderer.xib */,
+				3A079291216E1384009D9131 /* Fonts */,
 				3A079282216E05AC009D9131 /* Info.plist */,
 			);
 			path = AMProgressHUD;
@@ -95,6 +110,7 @@
 				TargetAttributes = {
 					3A07927D216E05AC009D9131 = {
 						CreatedOnToolsVersion = 10.0;
+						LastSwiftMigration = 1000;
 					};
 				};
 			};
@@ -120,6 +136,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3A079290216E083F009D9131 /* Renderer.xib in Resources */,
+				3A079292216E1384009D9131 /* Fonts in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -130,6 +148,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3A07928E216E083F009D9131 /* Renderer.swift in Sources */,
+				3A07928F216E083F009D9131 /* AMProgressHUD.swift in Sources */,
+				3A07928D216E083F009D9131 /* Spinner.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -261,6 +282,7 @@
 		3A079287216E05AC009D9131 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -270,6 +292,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = AMProgressHUD/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -278,6 +301,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.ampersand.AMProgressHUD;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -286,6 +310,7 @@
 		3A079288216E05AC009D9131 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -295,6 +320,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = AMProgressHUD/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
