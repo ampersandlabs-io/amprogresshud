@@ -1,0 +1,11 @@
+framework module AMProgressHUD {
+  umbrella header "AMProgressHUD.h"
+
+  export *
+  module * { export * }
+}
+
+module AMProgressHUD.Swift {
+    header "AMProgressHUD-Swift.h"
+    requires objc
+}
