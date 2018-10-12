@@ -12,6 +12,7 @@ internal class Renderer: UIView {
 
     @IBOutlet weak var spinner: Spinner!
     @IBOutlet weak var textLabel: UILabel!
+    @IBOutlet weak var centerConstraint: NSLayoutConstraint!
     
     func animate() {
         spinner.animate()

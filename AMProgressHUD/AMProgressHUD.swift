@@ -70,6 +70,8 @@ public class AMProgressHUD: UIView {
 extension AMProgressHUD {
     
     @objc public func show() {
+        self.childView.textLabel.isHidden = true
+        self.childView.centerConstraint.constant = 0
         self.showInSuperviewWithCompletion(
             UIApplication.shared.keyWindow!,
             completion: {}, animated: true
@@ -78,6 +80,8 @@ extension AMProgressHUD {
     
     @objc public func show(message: String) {
         self.childView.textLabel.text = message
+        self.childView.centerConstraint.constant = -23
+        self.childView.textLabel.isHidden = false
         self.showInSuperviewWithCompletion(
             UIApplication.shared.keyWindow!,
             completion: {}, animated: true
